@@ -15,7 +15,7 @@ define([
         if (!$("style[id='bootstrap']").length > 0) {
             $('<style id="bootstrap">').html(cssBoot).appendTo('head'); // Adding scoped bootstrap to head
             $('<style>').html(csscheckBox).appendTo('head'); // Adding checkbox styles to head
-            $('<script type="text/javascript" extension="senseFieldUI" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">').appendTo('body'); // Bootstrap.js CDN		
+            $('<script type="text/javascript" extension="senseFieldUI" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">').appendTo('body'); // Bootstrap.js CDN
         };
 
         if (!$("link[id='FA']").length > 0) {
@@ -70,6 +70,7 @@ define([
                                 expressionType: "dimension",
                                 ref: "qListObjectDef.qDef.qFieldDefs.0",
                                 label: "Field",
+								defaultValue: "=ValueList('A','B','C')",
                                 show: function (data) {
                                     return data.qListObjectDef && !data.qListObjectDef.qLibraryId;
                                 }
